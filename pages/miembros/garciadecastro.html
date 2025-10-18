@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos García de Castro | Ciberfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fondo animado con gradiente cibertech */
+    body {
+      background: radial-gradient(circle at 20% 20%, #0a0f1e 0%, #111827 70%, #000 100%);
+    }
+  </style>
+</head>
+
+<body class="text-gray-200 font-sans flex flex-col min-h-screen">
+
+  <!-- NAV -->
+  <nav class="bg-gray-900/90 backdrop-blur-md text-white shadow-md border-b border-cyan-500/40">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-semibold tracking-wide text-cyan-400">Taller GitHub</h1>
+      <ul class="flex space-x-6 text-sm">
+        <li><a href="../../index.html" class="hover:text-cyan-400 transition">Inicio</a></li>
+        <li><a href="../acercade.html" class="hover:text-cyan-400 transition">Acerca de</a></li>
+        <li><a href="../guiagithub.html" class="text-cyan-400 font-semibold border-b border-cyan-400 pb-0.5">Guía GitHub</a></li>
+
+        <!-- Menú desplegable de miembros -->
+        <li class="relative group">
+          <button class="hover:text-cyan-400 transition focus:outline-none">Miembros ▾</button>
+          <ul
+            class="absolute left-0 hidden group-hover:flex flex-col bg-gray-800 text-white rounded-md shadow-lg mt-2 w-56 py-1 text-sm border border-cyan-500/30"
+          >
+            <li><a href="marcos.html" class="block px-4 py-2 hover:bg-gray-700">Marcos Di Filippo</a></li>
+            <li><a href="ferrer.html" class="block px-4 py-2 hover:bg-gray-700">Carlos Ferrer</a></li>
+            <li><a href="garciadecastro.html" class="block px-4 py-2 hover:bg-gray-700 text-cyan-400 font-semibold">Carlos García de Castro</a></li>
+            <li><a href="franco.html" class="block px-4 py-2 hover:bg-gray-700">Franco Lapenna</a></li>
+            <li><a href="juan.html" class="block px-4 py-2 hover:bg-gray-700">Juan Ignacio Peralta Bello</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BIO -->
+  <section id="bio" class="flex flex-col items-center text-center py-16 px-6">
+    <img src="https://avatars.githubusercontent.com/garciadecastro"
+         alt="Carlos García de Castro"
+         class="w-40 h-40 rounded-full border-4 border-cyan-500 shadow-lg shadow-cyan-500/30 mb-6">
+    <h1 class="text-4xl font-bold mb-3 text-cyan-400 tracking-wide">Carlos García de Castro</h1>
+    <p class="text-gray-300 max-w-2xl leading-relaxed text-lg">
+      Nací en Sevilla, en 1983. Soy licenciado en Historia del Arte, con una maestría en Filosofía Contemporánea. Trabajo como profesor de español desde 2013 y soy desarrollador web en formación desde 2020. Me gusta fusionar la enseñanza con la tecnología para crear herramientas digitales que conecten culturas, idiomas y experiencias de aprendizaje.
+      Trabajo en proyectos híbridos entre educación y software, aplicando JavaScript, Vue.js, React y PHP.
+    </p>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="bg-gray-900/60 border-t border-cyan-500/20 py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold text-cyan-400 mb-8 uppercase tracking-wider">Experiencia</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-left text-gray-300">
+        <div class="bg-gray-800/60 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400 transition">
+          <h3 class="font-semibold text-cyan-300 mb-2">Desarrollo Web</h3>
+          <p>Creación de aplicaciones interactivas con <strong>Vue.js</strong> y <strong>React</strong>. Integración de APIs y servicios en tiempo real.</p>
+        </div>
+        <div class="bg-gray-800/60 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400 transition">
+          <h3 class="font-semibold text-cyan-300 mb-2">Educación Digital</h3>
+          <p>Docente especializado en enseñanza del español como lengua extranjera (niveles A1–C1). Diseño de materiales digitales interactivos. He desarrollado contenidos para la app de Busuu.</p>
+        </div>
+        <div class="bg-gray-800/60 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400 transition">
+          <h3 class="font-semibold text-cyan-300 mb-2">Proyectos</h3>
+          <p>Autor de <strong>BestSpanish.net</strong>, creador de <a href="https://cordobasierras.com/">Cordoba Sierras</a> y co-creador de <strong>Gambito Club</strong>, comunidades web de aprendizaje y ajedrez.</p>
+        </div>
+        <div class="bg-gray-800/60 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400 transition">
+          <h3 class="font-semibold text-cyan-300 mb-2">Intereses</h3>
+          <p>Análisis de datos, diseño UX, SEO, redes y entornos inmersivos. Enfocado en el cruce entre lenguaje humano y tecnología. Amo también el arte y la música electrónica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REDES SOCIALES -->
+  <section id="redes" class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-semibold text-cyan-400 mb-8 uppercase tracking-wider">Conecta conmigo</h2>
+    <div class="flex justify-center space-x-8 text-lg">
+      <a href="https://github.com/garciadecastro" target="_blank" class="text-cyan-400 hover:text-cyan-300 border-b border-transparent hover:border-cyan-300 transition">GitHub</a>
+      <a href="https://www.linkedin.com/in/bestspanishteacher/" target="_blank" class="text-cyan-400 hover:text-cyan-300 border-b border-transparent hover:border-cyan-300 transition">LinkedIn</a>
+      <a href="https://www.instagram.com/_gdcdesign/" target="_blank" class="text-cyan-400 hover:text-cyan-300 border-b border-transparent hover:border-cyan-300 transition">Instagram</a>
+      <a href="mailto:garciadecastroprofesional@gmail.com" class="text-cyan-400 hover:text-cyan-300 border-b border-transparent hover:border-cyan-300 transition">Email</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6 border-t border-cyan-500/30">
+    <p>&copy; 2025 Carlos García de Castro — Taller GitHub</p>
+  </footer>
+
+</body>
+</html>

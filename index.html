@@ -1,31 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>taller Github - clase 2</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taller GitHub - Clase 2</title>
+  <!-- CDN de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="#">inicio</a></li>
-            <li><a href="#">acerca de</a></li>
-        </ul>
-    </nav>
-    <h1>Bienvenidos al taller 11/10/2025</h1>
-    <h2>Participantes y direccion de github</h2>
-    <ul>
-        <li><a href="https://github.com/acenaga/">Carlos Ferrer</a></li>
-        <li><a href="https://github.com/garciadecastro">Carlos García de Castro</a></li>
-        <li><a href="https://github.com/JuaniPB/">Juan Ignacio Peralta Bello</a></li>
-        <li><a href="https://github.com/FrancoLapenna">Franco Lapenna</a></li>
-        <li><a href="https://github.com/marcosDiFilippo/">Marcos Di Filippo</a></li>
-    </ul>
-</body>
-<footer>
-    <p>Todos los derechos reservados &copy; 2025</p>
-</footer>
+<body class="bg-gray-100 text-gray-800 font-sans flex flex-col min-h-screen">
 
+  <nav class="bg-gray-900 text-white shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-semibold">Taller GitHub</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Inicio</a></li>
+        <li><a href="./pages/acercade.html" class="hover:text-yellow-300 transition">Acerca de</a></li>
+        <li><a href="./pages/guiagithub.html" class="hover:text-yellow-300 transition">Guía GitHub</a></li>
+        <!-- Menú desplegable de miembros -->
+        <li class="relative group">
+          <button class="hover:text-yellow-300 transition focus:outline-none">Miembros ▾</button>
+          <ul
+            class="absolute left-0 hidden group-hover:flex flex-col bg-gray-800 text-white rounded-md shadow-lg mt-2 w-56 py-1 text-sm"
+          >
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Marcos Di Filippo</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Carlos Ferrer</a></li>
+            <li><a href="./pages/miembros/garciadecastro.html" class="block px-4 py-2 hover:bg-gray-700">Carlos García de Castro</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Franco Lapenna</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Juan Ignacio Peralta Bello</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="flex-grow max-w-3xl mx-auto text-center py-12 px-4">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Bienvenidos al taller 11/10/2025</h1>
+    <h2 class="text-xl md:text-2xl font-semibold mb-6">Participantes y direcciones de GitHub</h2>
+
+    <ul class="space-y-3">
+        <li><a href="https://github.com/marcosDiFilippo/" class="text-blue-900 hover:underline">Marcos Di Filippo</a></li>  
+        <li><a href="https://github.com/acenaga/" class="text-blue-900 hover:underline">Carlos Ferrer</a></li>
+        <li><a href="https://github.com/garciadecastro" class="text-blue-900 hover:underline">Carlos García de Castro</a></li>
+        <li><a href="https://github.com/FrancoLapenna" class="text-blue-900 hover:underline">Franco Lapenna</a></li>
+        <li><a href="https://github.com/JuaniPB/" class="text-blue-900 hover:underline">Juan Ignacio Peralta Bello</a></li>      
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 text-center py-4 mt-8">
+    <p>Club del Taller de Github de Da Vinci &copy; 2025</p>
+  </footer>
+</body>
 </html>

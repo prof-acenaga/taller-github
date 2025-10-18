@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca de | Taller GitHub - Da Vinci</title>
+  <!-- CDN de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans flex flex-col min-h-screen">
+
+  <!-- 🔝 NAV -->
+  <nav class="bg-gray-900 text-white shadow-md">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-semibold">Taller GitHub</h1>
+      <ul class="flex space-x-6">
+        <li><a href="../index.html" class="hover:text-yellow-300 transition">Inicio</a></li>
+        <li><a href="acercade.html" class="hover:text-yellow-300 transition text-yellow-300 font-semibold">Acerca de</a></li>
+        <li><a href="./guiagithub.html" class="text-cyan-400 font-semibold border-b border-cyan-400 pb-0.5">Guía GitHub</a></li>
+        <!-- 🔽 Menú desplegable -->
+        <li class="relative group">
+          <button class="hover:text-yellow-300 transition focus:outline-none">Miembros ▾</button>
+          <ul
+            class="absolute left-0 hidden group-hover:flex flex-col bg-gray-800 text-white rounded-md shadow-lg mt-2 w-56 py-1 text-sm"
+          >
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Marcos Di Filippo</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Carlos Ferrer</a></li>
+            <li><a href="./miembros/garciadecastro.html" class="block px-4 py-2 hover:bg-gray-700">Carlos García de Castro</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Franco Lapenna</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Juan Ignacio Peralta Bello</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 📘 CONTENIDO PRINCIPAL -->
+  <main class="flex-grow max-w-3xl mx-auto py-12 px-6 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Acerca del Club</h1>
+
+    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+      Este sitio web forma parte de un <strong>club-comunidad</strong> creado a partir del
+      <strong>Taller de Git y GitHub</strong> realizado en la
+      <a href="https://davinci.edu.ar/" target="_blank" class="text-blue-900 hover:underline font-semibold">Escuela Da Vinci</a> durante el mes de octubre de 2025.
+      El taller fue impartido por
+      <a href="https://github.com/acenaga/" target="_blank" class="text-blue-900 hover:underline font-semibold">
+        Carlos Ferrer
+      </a>, y reunió a un grupo de estudiantes interesados en aprender sobre control de versiones,
+      trabajo colaborativo y desarrollo web moderno.
+    </p>
+
+    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+      A partir de esta experiencia surgió la idea de construir un espacio digital compartido,
+      donde los participantes pudieran presentar sus proyectos personales, mejorar sus habilidades
+      en Git y GitHub, y mantener viva la comunidad de aprendizaje más allá del aula.
+    </p>
+
+    <p class="text-lg text-gray-700 leading-relaxed">
+      En este sitio encontrarás los perfiles de cada miembro, sus repositorios,
+      y distintos recursos relacionados con el taller y el trabajo colaborativo en la web.
+    </p>
+  </main>
+
+  <!-- ⚙️ FOOTER -->
+  <footer class="bg-gray-800 text-gray-200 text-center py-4 mt-8">
+    <p>Club del Taller de GitHub - Escuela Da Vinci &copy; 2025</p>
+  </footer>
+
+</body>
+</html>
