@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía GitHub | Taller Da Vinci</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fondo cibertech */
+    body {
+      background: radial-gradient(circle at 20% 20%, #0a0f1e 0%, #111827 70%, #000 100%);
+    }
+  </style>
+</head>
+
+<body class="text-gray-200 font-sans flex flex-col min-h-screen">
+
+  <!-- NAV -->
+  <nav class="bg-gray-900/90 backdrop-blur-md text-white shadow-md border-b border-cyan-500/40">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-semibold tracking-wide text-cyan-400">Taller GitHub</h1>
+      <ul class="flex space-x-6 text-sm">
+        <li><a href="../index.html" class="hover:text-cyan-400 transition">Inicio</a></li>
+        <li><a href="./acercade.html" class="hover:text-cyan-400 transition">Acerca de</a></li>
+        <li><a href="./guiagithub.html" class="text-cyan-400 font-semibold border-b border-cyan-400 pb-0.5">Guía GitHub</a></li>
+
+        <!-- Menú desplegable -->
+        <li class="relative group">
+          <button class="hover:text-cyan-400 transition focus:outline-none">Miembros ▾</button>
+          <ul
+            class="absolute left-0 hidden group-hover:flex flex-col bg-gray-800 text-white rounded-md shadow-lg mt-2 w-56 py-1 text-sm border border-cyan-500/30"
+          >
+            <li><a href="./miembros/marcos.html" class="block px-4 py-2 hover:bg-gray-700">Marcos Di Filippo</a></li>
+            <li><a href="./miembros/ferrer.html" class="block px-4 py-2 hover:bg-gray-700">Carlos Ferrer</a></li>
+            <li><a href="./miembros/garciadecastro.html" class="block px-4 py-2 hover:bg-gray-700">Carlos García de Castro</a></li>
+            <li><a href="./miembros/franco.html" class="block px-4 py-2 hover:bg-gray-700">Franco Lapenna</a></li>
+            <li><a href="./miembros/juan.html" class="block px-4 py-2 hover:bg-gray-700">Juan Ignacio Peralta Bello</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="flex-grow max-w-5xl mx-auto py-16 px-6">
+    <h1 class="text-4xl font-bold text-center mb-10 text-cyan-400 tracking-wide uppercase">Guía rápida de Git & GitHub</h1>
+
+    <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+      Git es un sistema de control de versiones distribuido que permite trabajar de manera colaborativa y segura.  
+      GitHub amplía sus posibilidades al ofrecer alojamiento en la nube, trabajo en equipo y herramientas visuales.  
+      A continuación encontrarás los comandos más importantes, con explicaciones prácticas pensadas para estudiantes.
+    </p>
+
+    <!-- SECCIONES -->
+    <section class="space-y-10">
+
+      <!-- INSTALAR GIT -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Instalar Git</h2>
+        <p class="text-gray-300 mb-4">GitHub ofrece versiones para todas las plataformas principales. Instálalo desde:</p>
+        <ul class="list-disc list-inside text-gray-400 text-sm leading-relaxed">
+          <li><strong>Windows:</strong> <a href="https://windows.github.com" class="text-cyan-400 hover:underline">windows.github.com</a></li>
+          <li><strong>Mac:</strong> <a href="https://mac.github.com" class="text-cyan-400 hover:underline">mac.github.com</a></li>
+          <li><strong>Linux / POSIX:</strong> <a href="http://git-scm.com" class="text-cyan-400 hover:underline">git-scm.com</a></li>
+        </ul>
+        <p class="text-gray-400 mt-4 text-sm">
+          Puedes usar GitHub Desktop para una interfaz gráfica o la terminal para dominar los comandos manuales.
+        </p>
+      </article>
+
+      <!-- CONFIGURAR -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Configurar Herramientas</h2>
+        <p class="text-gray-300 mb-4">Antes de empezar, configura tu identidad de usuario:</p>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git config --global user.name "[nombre]"</code> — Define tu nombre de autor para todos los commits.</li>
+          <li><code class="text-cyan-400">$ git config --global user.email "[correo]"</code> — Asocia tu dirección de correo con tus confirmaciones.</li>
+          <li><code class="text-cyan-400">$ git config --global color.ui auto</code> — Activa colores en la salida de la terminal.</li>
+        </ul>
+      </article>
+
+      <!-- CREAR REPOSITORIOS -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Crear Repositorios</h2>
+        <p class="text-gray-300 mb-4">Puedes iniciar un nuevo proyecto o clonar uno existente desde la web.</p>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git init [project-name]</code> — Crea un repositorio vacío en tu equipo.</li>
+          <li><code class="text-cyan-400">$ git clone [url]</code> — Descarga un proyecto remoto completo (código + historial).</li>
+        </ul>
+      </article>
+
+      <!-- EFECTUAR CAMBIOS -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Efectuar Cambios</h2>
+        <p class="text-gray-300 mb-4">Flujo básico de trabajo: revisar, preparar y confirmar.</p>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git status</code> — Muestra qué archivos se han modificado o están pendientes de subir.</li>
+          <li><code class="text-cyan-400">$ git diff</code> — Compara los cambios realizados antes del commit.</li>
+          <li><code class="text-cyan-400">$ git add [file]</code> — Agrega un archivo al área de preparación.</li>
+          <li><code class="text-cyan-400">$ git diff --staged</code> — Muestra diferencias entre lo preparado y la última versión.</li>
+          <li><code class="text-cyan-400">$ git reset [file]</code> — Quita un archivo del área de preparación sin borrar su contenido.</li>
+          <li><code class="text-cyan-400">$ git commit -m "[mensaje]"</code> — Registra los cambios con un mensaje descriptivo.</li>
+        </ul>
+      </article>
+
+      <!-- CAMBIOS GRUPALES -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Cambios Grupales</h2>
+        <p class="text-gray-300 mb-4">Las ramas permiten desarrollar funciones o ideas sin alterar la versión principal.</p>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git branch</code> — Lista todas las ramas del repositorio.</li>
+          <li><code class="text-cyan-400">$ git branch [nombre]</code> — Crea una nueva rama.</li>
+          <li><code class="text-cyan-400">$ git checkout [rama]</code> — Cambia a la rama especificada.</li>
+          <li><code class="text-cyan-400">$ git merge [rama]</code> — Combina la rama con la actual.</li>
+          <li><code class="text-cyan-400">$ git branch -d [rama]</code> — Elimina una rama local.</li>
+        </ul>
+      </article>
+
+      <!-- NOMBRAR Y REFACTORIZAR -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Nombres del Archivo de Refactorización</h2>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git rm [file]</code> — Borra el archivo del proyecto y lo marca para commit.</li>
+          <li><code class="text-cyan-400">$ git rm --cached [file]</code> — Elimina el seguimiento de un archivo sin borrarlo localmente.</li>
+          <li><code class="text-cyan-400">$ git mv [file-original] [file-renamed]</code> — Cambia el nombre de un archivo y prepara el cambio para commit.</li>
+        </ul>
+      </article>
+
+      <!-- SUPRIMIR TRACKING -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Suprimir Tracking</h2>
+        <p class="text-gray-300 mb-4">Excluye archivos temporales o irrelevantes con un archivo especial llamado <code>.gitignore</code>.</p>
+        <pre class="bg-gray-800/70 text-cyan-300 text-sm p-4 rounded-md overflow-x-auto">
+*.log
+build/
+temp-*
+        </pre>
+        <p class="text-gray-300 text-sm mb-2">Estos patrones indican qué archivos o carpetas ignorar.</p>
+        <p class="text-gray-300 text-sm"><code class="text-cyan-400">$ git ls-files --other --ignored --exclude-standard</code> — Muestra los archivos ignorados del proyecto.</p>
+      </article>
+
+      <!-- REHACER COMMITS -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Rehacer Commits</h2>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git reset [commit]</code> — Revierte commits, conservando los cambios locales.</li>
+          <li><code class="text-cyan-400">$ git reset --hard [commit]</code> — Borra el historial y restaura el estado exacto del commit indicado.</li>
+        </ul>
+      </article>
+
+      <!-- REPASAR HISTORIAL -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Repasar Historial</h2>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git log</code> — Muestra el historial de commits en la rama actual.</li>
+          <li><code class="text-cyan-400">$ git log --follow [file]</code> — Muestra los cambios de un archivo específico (incluso renombrado).</li>
+          <li><code class="text-cyan-400">$ git diff [rama1]...[rama2]</code> — Compara el contenido entre dos ramas.</li>
+          <li><code class="text-cyan-400">$ git show [commit]</code> — Detalla los cambios y metadatos de un commit concreto.</li>
+        </ul>
+      </article>
+
+      <!-- GUARDAR FRAGMENTOS -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Guardar Fragmentos</h2>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git stash</code> — Guarda temporalmente tus cambios sin hacer commit.</li>
+          <li><code class="text-cyan-400">$ git stash list</code> — Lista los cambios almacenados.</li>
+          <li><code class="text-cyan-400">$ git stash pop</code> — Restaura el último stash.</li>
+          <li><code class="text-cyan-400">$ git stash drop</code> — Elimina el stash más reciente.</li>
+        </ul>
+      </article>
+
+      <!-- SINCRONIZAR CAMBIOS -->
+      <article class="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-6 shadow-lg hover:border-cyan-400 transition">
+        <h2 class="text-2xl text-cyan-300 font-semibold mb-4 uppercase tracking-wide">Sincronizar Cambios</h2>
+        <ul class="text-gray-300 text-sm leading-relaxed space-y-2">
+          <li><code class="text-cyan-400">$ git fetch [bookmark]</code> — Descarga el historial remoto sin aplicarlo aún.</li>
+          <li><code class="text-cyan-400">$ git merge [bookmark]/[rama]</code> — Integra los cambios descargados.</li>
+          <li><code class="text-cyan-400">$ git push [alias] [rama]</code> — Envía tus commits a GitHub.</li>
+          <li><code class="text-cyan-400">$ git pull</code> — Descarga y fusiona los cambios remotos.</li>
+        </ul>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6 border-t border-cyan-500/30">
+    <p>&copy; 2025 Club del Taller GitHub - Escuela Da Vinci</p>
+  </footer>
+
+</body>
+</html>
